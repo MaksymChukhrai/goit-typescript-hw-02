@@ -9,11 +9,11 @@ class Component <T extends ComponentProps>{
   constructor (public props:T) { }
 }
 
-interface PageProps {
-  title: string;
-}
+// interface PageProps {    //прибрав
+//   title: string;
+// }
 
-class Page extends Component <PageProps>{
+class Page extends Component <ComponentProps>{ //змінив на ComponentProps
   pageInfo () {
     console.log(this.props.title);
   }

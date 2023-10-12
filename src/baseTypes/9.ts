@@ -6,7 +6,7 @@ interface Page {
   likes: number;
   accounts: string[];
   status: 'open' | 'close'; 
-  details: { 
+  details?: {   //уточнив (?)
     createAt: Date;
     updateAt: Date;
   };

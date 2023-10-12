@@ -13,7 +13,10 @@ type AllType = {
 
 
 
-function compare<T extends AllType, U extends AllType>(top: T, bottom: U): Pick<AllType, 'name' | 'color' | 'position' | 'weight'> {
+function compare<T extends AllType, U extends AllType>(
+  top: Pick<T, keyof AllType>,
+  bottom: Pick<U, keyof AllType> //поправив
+): AllType {
   return {
     name: top.name,
     color: top.color,
